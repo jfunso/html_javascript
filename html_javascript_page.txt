@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset = "utf-8">
+   <title> Credit limit determination </title>
+    <script type = "text/javascript">
+
+     var Beginbalance;
+     var Charges;
+     var Credits;
+     var Allowedcredit;
+     var balanceN;
+     var balanceB;
+     var char;
+     var cre;
+     var creA;
+     var accountNo;
+     
+
+     Accountno = window.prompt("Enter account number");
+     Beginbalance = window.prompt("Enter balance at begin of the month");
+     Charges = window.prompt("Enter charges of all items for the month");
+     Credits = window.prompt("Enter total credits consumed for the month");
+     Allowedcredit = window.prompt("Enter credit limit allowed for the month");
+
+  
+     accountNo = parseInt(Accountno);
+     balanceB = parseInt(Beginbalance);
+     char = parseInt(Charges);
+     cre = parseInt(Credits);
+     creA = parseInt(Allowedcredit);
+
+     balanceN = balanceB + char - cre;
+     document.writeln("<h1>The new balance is "+ balanceN +"</h1>");
+       
+     if(balanceN > creA) 
+     document.writeln("<h1>Credit limit exceeded for customer with account number "+ accountNo +"</h1>"); 
+
+ 
+  </script>
+ </head><body></body>
+</html>
